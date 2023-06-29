@@ -7,7 +7,8 @@
   background-color: #333333;
 }
 
-.global-header .main-navigation a,.global-header .main-navigation a:visited {
+.global-header .main-navigation a,
+.global-header .main-navigation a:visited {
   color:var(--link-color);
 }
 
