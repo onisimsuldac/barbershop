@@ -101,7 +101,7 @@
                 to improve everyone who comes to us!
               </p>
             </div>
-            <button class="button">Book a service</button>
+            <button class="button book-a-service-btn-light">Book a service</button>
           </div>
         </div>
       </div>
@@ -171,7 +171,7 @@
           </ul>
         </div>
         <div class="centered-content">
-          <button class="button">Book a service</button>
+          <button class="button book-a-service-btn">Book a service</button>
         </div>
       </div>
     </section>
@@ -332,6 +332,23 @@
         <!-- Book a section -->
         <section class="section booking-form">
           <h2>Book a Service</h2>
+          <form action="">
+            <div class="form-row">
+              <label class="form-group">
+                <input type="text" name="username" placeholder="Name*" class="input" required>
+                <span class="label-text">Name</span>
+              </label>
+              <label class="form-group">
+                <input type="text" name="teltphone" placeholder="Teltphone*" class="input" required>
+                <span class="label-text">Telephone</span>
+              </label>
+            </div>
+            <label class="form-group">
+              <textarea name="Message" placeholder="Message" rows="3" class="input"></textarea>
+              <span class="label-text">Message</span>
+            </label>
+
+          </form>
           <button class="button-transparent">Send</button>
         </section>
 
@@ -379,18 +396,18 @@
       </ul>
     </div>
   </footer>
-<!-- modal -->
-<div class="modal is-hidden" data-modal>
-<div class="modal-content">
-  <button class="close-btn" data-modal-close>&times;</button>
-  continutul modalului
-</div>
+  <!-- modal -->
+  <div class="modal is-hidden" data-modal>
+    <div class="modal-content">
+      <button class="close-btn" data-modal-close>&times;</button>
+      continutul modalului
+    </div>
 
 
-  <script>
-    feather.replace()
-  </script>
-  <script src="./js/modal.js"></script>
+    <script>
+      feather.replace()
+    </script>
+    <script src="./js/modal.js"></script>
 </body>
 
 </html>

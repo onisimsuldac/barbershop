@@ -17,6 +17,7 @@
   --social-icon-color: #303030;
   --social-icon-hover-color: #ff6c00;
   --heading-alternate-color: #303030;
+  --transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 * {
@@ -58,6 +59,10 @@ ul {
   line-height: 16px;
   letter-spacing: 0.09em;
   text-transform: uppercase;
+}
+
+a {
+  transition: color 250ms var(--transition);
 }
 
 .global-aside {
@@ -121,11 +126,29 @@ img.dash {
   outline: none;
   margin-left: 40px;
   padding: 12px 25px;
+  transition: background-color var(--transition);
 }
 
 .book-a-service-btn:hover,
 .book-a-service-btn:focus {
   background-color: #ff6c00;
+}
+
+.book-a-service-btn-light {
+  background: white;
+  border-radius: 25px;
+  border: 1px solid #ff6c00;
+  cursor: pointer;
+  color: #303030;
+  outline: none;
+  margin-left: 40px;
+  padding: 12px 25px;
+  transition: background-color var(--transition);
+}
+
+.book-a-service-btn-light:hover {
+  background-color: #ff6c00;
+  color: white;
 }
 
 .global-header .main-navigation {
@@ -467,7 +490,7 @@ a.social-link:focus {
 }
 
 .button-transparent {
-  margin-top: 232px;
+  margin-top: 44px;
   outline: none;
   background: transparent;
   border: 1px solid #ff6c00;
@@ -542,6 +565,66 @@ a.social-link:focus {
   height: 20px;
 }
 
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 44px;
+  margin-top: 44px;
+}
+
+.form-row {
+  display: flex;
+  gap: 30px;
+}
+
+form .label-text {
+  color: white;
+  letter-spacing: 1.1px;
+  text-transform: uppercase;
+  position: absolute;
+  top: -8;
+  left: 0;
+  transition: top var(--transition);
+}
+
+form .input::placeholder {
+  color: rgba(157, 164, 189, 0.4);
+  font-size: 11px;
+  letter-spacing: 1.1px;
+  text-transform: uppercase;
+}
+
+form .input {
+  appearance: none;
+  outline: none;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(157, 164, 189, 0.4);
+  width: 100%;
+  color: rgba(157, 164, 189, 0.4);
+  padding: 8px 0;
+  transition: border var(--transition), color var(--transition);
+}
+
+form .input:placeholder-shown ~ .label-text {
+  display: none;
+  top: 0;
+}
+
+form .input:focus {
+  color: white;
+  border-color: white;
+}
+
+form .input:focus::placeholder {
+  color: white;
+}
+
+form .form-group {
+  flex: 1;
+  position: relative;
+}
+
 .modal {
   position: fixed;
   top: 0;
@@ -551,6 +634,7 @@ a.social-link:focus {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: transform var(--transition);
 }
 
 .modal-content {
@@ -564,20 +648,22 @@ a.social-link:focus {
 
 .is-hidden {
   visibility: hidden;
+  transform: scale(1.1);
 }
 
 .close-btn {
   background-color: red;
-  border: 1px solid red;
+  border: 1px solid rgb(116, 11, 11);
   color: white;
   cursor: pointer;
   outline: none;
   position: absolute;
   right: 16px;
   top: 16px;
+  transition: background-color var(--transition);
 }
 
 .close-btn:hover,
 .close-btn:focus {
-  background-color: red;
+  background-color: rgb(116, 11, 11);
 }
