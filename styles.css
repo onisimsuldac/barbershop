@@ -631,10 +631,12 @@ form .form-group {
   left: 0;
   width: 100vw;
   height: 100vh;
+  background: #303030;
   display: flex;
   justify-content: center;
   align-items: center;
   transition: transform var(--transition);
+  pointer-events: auto;
 }
 
 .modal-content {
@@ -666,4 +668,58 @@ form .form-group {
 .close-btn:hover,
 .close-btn:focus {
   background-color: rgb(116, 11, 11);
+}
+
+/* .overlay-text {
+  background-color: grey;
+  position: absolute;
+  bottom: 0;
+} */
+
+.form-modal {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: flex-start;
+}
+
+.form-modal input {
+  flex: 2;
+  width: 100%;
+}
+
+ .terms-conditions-checkbox {
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-modal .checkbox {
+  width: 16px;
+  height: 16px;
+}
+
+.form-modal .terms-info{
+  margin-left: 8px;
+}
+
+.input-icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  width: 18px;
+  height: 18px;
+}
+
+
+.form-modal .submit-button {
+  width: 200px;
+  height: 50px;
+  background-color: #2196F3;
+  cursor: pointer;
+  align-self: center;
+  border: none;
+  border-radius: 4px;
+  color: white;
 }
